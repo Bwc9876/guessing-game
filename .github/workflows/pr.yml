@@ -13,10 +13,10 @@ jobs:
           number="${{ secrets.number }}"
 
           if (( guess > number )); then
-            echo "::error file=guess.txt,title=Incorrect::Hour number is too high!"
+            echo "::error file=guess.txt,title=Incorrect::Your number is too high!"
             exit 1
           elif (( guess < number )); then
-            echo "::error file=guess.txt,title=Incorrect::Hour number is too low!"
+            echo "::error file=guess.txt,title=Incorrect::Your number is too low!"
             exit 1
           else
             echo "Correct!!!"
